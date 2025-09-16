@@ -1,0 +1,70 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #1a237e;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px dashed #9fa8da;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.puzzle-area {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+#puzzle-container, #pieces-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    padding: 10px;
+    background-color: #c5cae9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.puzzle-piece, .placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #e8eaf6;
+    border: 1px solid #9fa8da;
+    box-sizing: border-box; /* Important for border not to add size */
+}
+
+.puzzle-piece {
+    cursor: grab;
+    background-size: 300px 300px; /* 3x piece size */
+    transition: transform 0.2s ease;
+}
+
+.puzzle-piece:active {
+    cursor: grabbing;
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+#win-message {
+    color: #2e7d32;
+    font-size: 2em;
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+}
