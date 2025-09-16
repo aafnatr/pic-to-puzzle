@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Puzzle Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Image Puzzle Maker 🧩</h1>
+    <p>Upload a picture to turn it into a 3x3 puzzle!</p>
+
+    <input type="file" id="image-uploader" accept="image/*">
+
+    <h2 id="win-message" class="hidden">🎉 You Solved It! 🎉</h2>
+
+    <div class="puzzle-area">
+        <div id="puzzle-container">
+            </div>
+        <div id="pieces-container">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
